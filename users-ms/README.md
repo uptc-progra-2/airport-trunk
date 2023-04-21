@@ -1,3 +1,0 @@
-﻿# users-ms
-
-Microservice to create, update or delete ever kind of user like a recptionist, customers, pilotes ...
