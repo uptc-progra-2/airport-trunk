@@ -8,6 +8,8 @@ class MsPricesApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("hello world");
 	}
+
 
 }
