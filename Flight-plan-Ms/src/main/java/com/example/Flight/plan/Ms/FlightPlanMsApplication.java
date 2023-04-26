@@ -1,4 +1,4 @@
-package main.java.com.example.Flight.plan.Ms;
+package com.example.Flight.plan.Ms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
