@@ -11,11 +11,28 @@ public class Fly {
     private int airplaneId;
     private List<Chair> listChairs;
     private Date dateTime;
-    private Durationype durationType;
+    private DurationType durationType;
     private int millas;
     private List<Customer> listCustomer;
     private int costByMillas;
     
+    public Fly() {
+    }
+    public Fly(int pilotId, int copilotId, List<Routes> listRoutes, int duration, int airplaneId,
+            List<Chair> listChairs, Date dateTime, DurationType durationType, int millas, List<Customer> listCustomer,
+            int costByMillas) {
+        this.pilotId = pilotId;
+        this.copilotId = copilotId;
+        this.listRoutes = listRoutes;
+        this.duration = duration;
+        this.airplaneId = airplaneId;
+        this.listChairs = listChairs;
+        this.dateTime = dateTime;
+        this.durationType = durationType;
+        this.millas = millas;
+        this.listCustomer = listCustomer;
+        this.costByMillas = costByMillas;
+    }
     public int getPilotId() {
         return pilotId;
     }
@@ -58,10 +75,10 @@ public class Fly {
     public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
     }
-    public Durationype getDurationType() {
+    public DurationType getDurationType() {
         return durationType;
     }
-    public void setDurationType(Durationype durationType) {
+    public void setDurationType(DurationType durationType) {
         this.durationType = durationType;
     }
     public int getMillas() {
