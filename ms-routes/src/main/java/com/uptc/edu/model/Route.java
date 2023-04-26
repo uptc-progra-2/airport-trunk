@@ -3,8 +3,9 @@ package com.uptc.edu.model;
 public class Route {
     private String origin;
     private String destination;
-    private DurationType duration;
-    private int durationTime;
+    private int durationTimeByHours;
+    private int durationTimeByMinutes;
+    private int durationTimeBySeconds;
 
     /**
      * Metodo para mostrar La ciudad de origen de la ruta
@@ -43,44 +44,81 @@ public class Route {
     }
 
     /**
-     * Metodo para mostrar La duracion de la ruta (Horas, Minuto o Segundos)
+     * Metodo para mostrar La duracion de la ruta por horas
      * 
-     * @return String con la duracion de la ruta
+     * @return int con la duracion de la ruta en horas
      */
-    public String getDuration() {
-        return duration.getName();
+    public int getDurationTimeByHours() {
+        return durationTimeByHours;
     }
 
     /**
-     * Metodo para crear La duracion de la ruta (Horas, Minuto o Segundos)
+     * Metodo para crear La duracion de la ruta por horas
      * 
-     * @param duration duracion de la ruta
+     * @param durationTime duracion de la ruta en horas
      */
-    public void setDuration(DurationType duration) {
-        this.duration = duration;
+    public void setDurationTimeByHours(int durationTimeByHours) {
+        this.durationTimeByHours = durationTimeByHours;
     }
 
     /**
-     * Metodo para mostrar La duracion de la ruta
+     * Metodo para mostrar La duracion de la ruta por minutos
      * 
-     * @return int con la duracion de la ruta
+     * @return int con la duracion de la ruta en minutos
      */
-    public int getDurationTime() {
-        return durationTime;
+    public int getDurationTimeByMinutes() {
+        return durationTimeByMinutes;
     }
 
     /**
-     * Metodo para crear La duracion de la ruta
+     * Metodo para crear La duracion de la ruta por minutos
      * 
-     * @param durationTime duracion de la ruta
+     * @param durationTime duracion de la ruta en minutos
      */
-    public void setDurationTime(int durationTime) {
-        this.durationTime = durationTime;
+    public void setDurationTimeByMinutes(int durationTimeByMinutes) {
+        this.durationTimeByMinutes = durationTimeByMinutes;
+    }
+
+    /**
+     * Metodo para mostrar La duracion de la ruta por segundos
+     * 
+     * @return int con la duracion de la ruta en segundos
+     */
+    public int getDurationTimeBySeconds() {
+        return durationTimeBySeconds;
+    }
+
+    /**
+     * Metodo para crear La duracion de la ruta por segundos
+     * 
+     * @param durationTime duracion de la ruta en segundos
+     */
+    public void setDurationTimeBySeconds(int durationTimeBySeconds) {
+        this.durationTimeBySeconds = durationTimeBySeconds;
+    }
+
+    public String CalculateDurationTime(int hours, int minutes, int seconds) {
+        return hours + " " + DurationType.HOURS.getName() + ", " + minutes + " " + DurationType.MINUTES.getName() + ", " + seconds
+                + " " + DurationType.SECONDS.getName();
     }
 
     @Override
     public String toString() {
         return "Ruta\nOrigen: " + getOrigin() + "\nDestino: " + getDestination() + "\nTiempo estimado: "
-                + getDurationTime() + " " + getDuration();
+                + CalculateDurationTime(getDurationTimeByHours(), getDurationTimeByMinutes(),
+                        getDurationTimeBySeconds());
+    }
+
+    public static void main(String[] args) {
+        Route route = new Route();
+        route.setOrigin("Bogota");
+        route.setDestination("Medellin");
+        route.setDurationTimeByHours(0);
+        route.setDurationTimeByMinutes(10);
+        route.setDurationTimeBySeconds(55);
+        route.CalculateDurationTime(route.getDurationTimeByHours(), route.getDurationTimeByMinutes(),
+        route.getDurationTimeBySeconds());
+        System.out.println(route);
+
     }
 }
