@@ -1,0 +1,21 @@
+{
+  "v1/ms-price/prices":{
+    "post":{
+      "request":{
+        "cabin_type": "enum",
+        "value":"double"
+      },
+
+      "response":{}
+
+    },
+
+    "get": {
+      "query": "?cabin_type=enum",
+      "prices":{
+        "cabin_type": "enum",
+        "value": "double"
+      }
+    }
+  }
+}
