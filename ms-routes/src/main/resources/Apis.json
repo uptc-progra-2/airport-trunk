@@ -1,0 +1,42 @@
+"ms/routes": {
+    "post": {
+        "request": {
+            "origin": "string",
+            "destination": "string",
+            "durationTimeByhours": "int",
+            "durationTimeByMinutes": "int",
+            "durationTimeBySeconds": "int"
+        }
+
+        "response"{
+            "data": {
+                {
+                    "origin": "string",
+                    "destination": "string",
+                    "durationTimeByhours": "int",
+                    "durationTimeByMinutes": "int",
+                    "durationTimeBySeconds": "int",
+                    "calculateDurationTime": "String"
+                }
+            }
+        }
+    }
+    
+
+    "get": {
+        "request": {}
+    
+        "response"{
+            "data": {
+                {
+                    "calculateDurationTime": "String",
+                    "origin": "string",
+                    "destination": "string",
+                    "durationTimeByhours": "int",
+                    "durationTimeByMinutes": "int",
+                    "durationTimeBySeconds": "int"
+                }
+            }
+        }
+    }
+}
