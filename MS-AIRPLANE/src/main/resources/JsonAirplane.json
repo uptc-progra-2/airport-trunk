@@ -1,0 +1,25 @@
+{
+"/v1/CreateAirplane":{
+    "post":{
+        "request":{
+            "id_airplane": "Integer", 
+            "number_chairs": "List",
+            "Model_Airplane": "String",
+            "Type_Airplane": "AirplaneType",
+            "Hours_flying": "Integer",
+            "State_airplan": "Status",
+            "fly_Time": "Integer"
+        }, 
+        "response":{}
+    },"get":{
+            "query": "?id_airplane=Integer",
+            "airplane": {
+                "number_chairs": "List",
+                "Model_Airplane" :"String",
+                "Type_Airplane" : "AirplaneType",
+                "State_airplan": "Status"
+
+            }
+    }
+}
+}
