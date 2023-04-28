@@ -1,0 +1,2 @@
+0;Chevrolet;SAIL;2022
+0;Mazda;CX30;2022
